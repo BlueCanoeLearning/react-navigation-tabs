@@ -1,6 +1,6 @@
 {
   "name": "@rotarsebastian/react-navigation-tabs",
-  "version": "2.7.0",
+  "version": "1.0.0",
   "description": "Tab Navigation components for React Navigation",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -16,8 +16,7 @@
     "lint": "eslint --ext .js,.ts,.tsx .",
     "bootstrap": "yarn --cwd example && yarn",
     "example": "yarn --cwd example",
-    "release": "yarn release-it",
-    "prepare": "bob build"
+    "release": "yarn release-it"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
@@ -76,7 +75,6 @@
     "react-native-reanimated": "^1.2.0",
     "react-navigation": "^4.0.7",
     "react-test-renderer": "16.5.0",
-    "release-it": "^10.3.1",
     "typescript": "^3.5.2"
   },
   "peerDependencies": {

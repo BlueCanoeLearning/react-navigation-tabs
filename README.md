@@ -2,6 +2,8 @@ This package has been moved to https://github.com/react-navigation/react-navigat
 
 ---
 
+Forked from [React Navigation Tabs](https://github.com/react-navigation/tabs) and fixed the issue appeared with the deprecation of `removeEventListener` support for React Native
+
 # React Navigation Tabs
 
 [![Build Status][build-badge]][build]

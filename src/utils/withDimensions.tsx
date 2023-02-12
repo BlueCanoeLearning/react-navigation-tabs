@@ -24,22 +24,29 @@ export default function withDimensions<Props extends InjectedProps>(
     constructor(props: Props) {
       super(props);
 
+      this.dimensionsSubscription = null;
+
       const { width, height } = Dimensions.get('window');
       this.state = {
-        dimensionsSubscription: null,
         dimensions: { width, height },
         isLandscape: isOrientationLandscape({ width, height }),
       };
     }
 
     componentDidMount() {
-      const dimensionsSubscription = Dimensions.addEventListener('change', this.handleOrientationChange);
-      this.setState({ dimensionsSubscription });    
+      this.dimensionsSubscription = Dimensions.addEventListener(
+        'change',
+        this.handleOrientationChange
+      );
     }
 
     componentWillUnmount() {
-      this.state.dimensionsSubscription.remove();
+      if (this.dimensionsSubscription) {
+        this.dimensionsSubscription.remove();
+      }
     }
+
+    dimensionsSubscription: any;
 
     handleOrientationChange = ({ window }: { window: ScaledSize }) => {
       const { width, height } = window;
@@ -51,8 +58,7 @@ export default function withDimensions<Props extends InjectedProps>(
 
     render() {
       // @ts-ignore
-      const { dimensionsSubscription, ...restOfState } = this.state;
-      return <WrappedComponent {...this.props} {...restOfState} />;
+      return <WrappedComponent {...this.props} {...this.state} />;
     }
   }
 
