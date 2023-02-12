@@ -1,5 +1,5 @@
 {
-  "name": "react-navigation-tabs",
+  "name": "@rotarsebastian/react-navigation-tabs",
   "version": "2.7.0",
   "description": "Tab Navigation components for React Navigation",
   "main": "lib/commonjs/index.js",
@@ -35,7 +35,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-navigation/tabs.git"
+    "url": "https://github.com/rotarsebastian/react-navigation-tabs.git"
   },
   "author": "Satyajit Sahoo <satyajit.happy@gmail.com> (https://github.com/satya164/)",
   "license": "MIT",
