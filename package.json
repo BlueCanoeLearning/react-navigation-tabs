@@ -4,8 +4,8 @@
   "description": "Tab Navigation components for React Navigation",
   "main": "src/index.tsx",
   "module": "src/index.tsx",
-  "react-native": "lib/module/index.js",
-  "types": "lib/typescript/src/index.d.ts",
+  "react-native": "src/index.tsx",
+  "types": "src/types.tsx",
   "files": [
     "src",
     "lib"
